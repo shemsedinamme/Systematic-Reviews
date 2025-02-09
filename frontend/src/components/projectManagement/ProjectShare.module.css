@@ -1,0 +1,71 @@
+/* ProjectShare.module.css */
+.shareContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.shareContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shareForm, .shareLink {
+  display: flex;
+    margin-bottom: 10px;
+}
+
+.shareInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.shareInput:focus {
+  border-color: MediumSeaGreen;
+}
+
+.accessSelect {
+  padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.accessSelect:focus {
+  border-color: MediumSeaGreen;
+}
+
+
+.shareButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.shareButton:hover {
+    background-color: #253725;
+}
+.message{
+    text-align: center;
+    padding: 10px;
+    margin-top:10px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .shareContainer {
+    padding: 15px;
+  }
+}

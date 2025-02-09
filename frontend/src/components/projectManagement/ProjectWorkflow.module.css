@@ -1,0 +1,102 @@
+/* ProjectWorkflow.module.css */
+.workflowContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.workflowContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.workflowAddStage, .workflowAddTask, .workflowAssignTask {
+  display: flex;
+    margin-bottom: 10px;
+}
+.workflowInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.workflowInput:focus{
+    border-color: MediumSeaGreen
+}
+.workflowSelect{
+  padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.workflowSelect:focus{
+    border-color: MediumSeaGreen
+}
+
+.addButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.addButton:hover {
+     background-color: #253725;
+}
+
+.workflowList{
+  border: 1px solid #ccc;
+    border-radius: 4px;
+  padding: 10px;
+}
+.workflowStage{
+  margin-bottom: 15px;
+}
+.workflowStage h3{
+    margin-bottom: 10px;
+}
+.taskList {
+  list-style: none;
+    padding: 0;
+}
+
+.taskItem {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    background: #f9f9f9
+}
+
+.dependencyList {
+  margin-top: 10px;
+  padding-left: 15px;
+  border-left: 1px solid #ccc;
+}
+
+.dependencyList span{
+    font-weight: bold;
+}
+.dependencyList ul{
+   list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+.dependencyList li {
+  padding: 5px 10px;
+  margin-bottom: 2px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .workflowContainer {
+    padding: 15px;
+  }
+}
