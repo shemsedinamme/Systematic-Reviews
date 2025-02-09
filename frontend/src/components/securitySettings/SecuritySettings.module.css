@@ -1,0 +1,66 @@
+/* SecuritySettings.module.css */
+.securitySettingsContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+   border: 1px solid #ddd;
+  border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.securitySettingsContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.settingItem {
+    display: flex;
+    align-items: center;
+  justify-content: space-between;
+    margin-bottom: 10px;
+}
+.settingItem label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.toggleOnButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.toggleOnButton:hover{
+     background-color: #253725;
+}
+.toggleOffButton {
+      padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.toggleOffButton:hover {
+    background-color: #253725;
+}
+.ssoButton {
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.ssoButton:hover {
+    background-color: #253725;
+}
+@media (max-width: 768px) {
+  .securitySettingsContainer {
+    padding: 15px;
+  }
+}
