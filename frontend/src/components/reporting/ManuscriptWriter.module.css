@@ -1,0 +1,135 @@
+/* ManuscriptWriter.module.css */
+.writerContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.writerContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.manuscriptForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.manuscriptInput {
+   flex: 1;
+    padding: 8px;
+     border: 1px solid #ccc;
+    border-radius: 4px;
+      box-sizing: border-box;
+       margin-right: 10px;
+}
+.manuscriptInput:focus{
+   border-color: MediumSeaGreen
+}
+
+.templateSelect {
+  padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  box-sizing: border-box;
+    margin-right: 10px;
+}
+.templateSelect:focus{
+    border-color: MediumSeaGreen
+}
+.createButton{
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.createButton:hover {
+    background-color: #253725;
+}
+.sectionList {
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+      padding: 10px;
+       border-radius: 4px;
+}
+.sectionItem{
+    margin-bottom: 10px;
+    padding: 5px;
+}
+.formatAndExport{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.styleSelect {
+    padding: 8px;
+   border: 1px solid #ccc;
+  border-radius: 4px;
+   box-sizing: border-box;
+   margin-right: 10px;
+}
+.styleSelect:focus{
+    border-color: MediumSeaGreen
+}
+
+.checkButton, .citationButton {
+   padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+      margin-right: 10px;
+}
+.checkButton:hover,.citationButton:hover {
+    background-color: #253725;
+}
+.exportButton {
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+       margin-right: 10px;
+}
+.exportButton:hover {
+   background-color: #253725;
+}
+
+.saveButton {
+   padding: 8px 12px;
+   background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-top: 10px;
+}
+.saveButton:hover {
+   background-color: #253725;
+}
+.message{
+  text-align: center;
+  padding: 10px;
+  margin-top:10px;
+  border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .writerContainer {
+        padding: 15px;
+    }
+}

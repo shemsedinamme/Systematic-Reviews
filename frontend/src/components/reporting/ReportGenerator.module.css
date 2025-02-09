@@ -1,0 +1,73 @@
+/* ReportGenerator.module.css */
+.reportContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.reportContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.templateSelect{
+  padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.templateSelect:focus{
+   border-color: MediumSeaGreen
+}
+.generateButton {
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-top: 10px;
+}
+.generateButton:hover {
+   background-color: #253725;
+}
+
+.exportOptions {
+    margin-top: 10px;
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.exportButton {
+  padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin: 0 5px;
+}
+.exportButton:hover {
+    background-color: #253725;
+}
+
+.message{
+  text-align: center;
+  padding: 10px;
+    margin-top:10px;
+  border-radius: 4px;
+     background: #f0f0f0;
+   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .reportContainer {
+    padding: 15px;
+  }
+}
