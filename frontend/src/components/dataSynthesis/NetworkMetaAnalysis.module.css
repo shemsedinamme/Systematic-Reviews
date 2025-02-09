@@ -1,0 +1,54 @@
+/* NetworkMetaAnalysis.module.css */
+.networkMetaContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.networkMetaContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.dataInput {
+    width: 100%;
+    min-height: 100px;
+    padding: 8px;
+   border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.dataInput:focus{
+  border-color: MediumSeaGreen;
+}
+.analyzeButton {
+   padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.analyzeButton:hover{
+   background-color: #253725;
+}
+.message{
+  text-align: center;
+  padding: 10px;
+    margin-top:10px;
+  border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .networkMetaContainer {
+    padding: 15px;
+  }
+}

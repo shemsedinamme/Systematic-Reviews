@@ -1,0 +1,66 @@
+/* DataAnalysis.module.css */
+.analysisContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+     border-radius: 8px;
+      background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.analysisContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.analysisForm, .visualizationForm {
+  display: flex;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.analysisSelect, .chartSelect {
+    padding: 8px;
+   border: 1px solid #ccc;
+     border-radius: 4px;
+     box-sizing: border-box;
+     margin-right: 10px;
+}
+.analysisSelect:focus, .chartSelect:focus {
+  border-color: MediumSeaGreen;
+}
+.dataText {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+     box-sizing: border-box;
+      margin-right: 10px;
+}
+.dataText:focus{
+   border-color: MediumSeaGreen;
+}
+
+.analyzeButton, .visualizeButton{
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.analyzeButton:hover, .visualizeButton:hover {
+    background-color: #253725;
+}
+.chartContainer{
+ border: 1px solid #eee;
+ padding: 10px;
+  border-radius: 4px;
+    margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .analysisContainer {
+    padding: 15px;
+  }
+}
