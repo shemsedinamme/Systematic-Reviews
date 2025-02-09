@@ -1,0 +1,50 @@
+/* ProjectLifecycle.module.css */
+.lifecycleContainer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+     border: 1px solid #ddd;
+  border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.lifecycleContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lifecycleActions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.lifecycleActions button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.lifecycleActions button:hover {
+   background-color: #253725;
+}
+.message{
+  text-align: center;
+  padding: 10px;
+    margin-top:10px;
+  border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .lifecycleContainer {
+        padding: 15px;
+    }
+}
