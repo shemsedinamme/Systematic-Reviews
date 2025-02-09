@@ -1,0 +1,137 @@
+/* TitleAbstractScreening.module.css */
+.screeningContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.screeningContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.statusDisplay{
+    margin-bottom: 15px;
+    text-align: center;
+}
+.statusDisplay span {
+  margin-right: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.articleDisplay {
+    display: flex;
+    flex-wrap: wrap;
+   margin-bottom: 15px;
+}
+.articleCard {
+    flex: 2;
+    padding: 10px;
+      border: 1px solid #eee;
+    border-radius: 4px;
+}
+.articleCard h2{
+    margin-bottom: 10px;
+}
+.decisionForm{
+    flex: 1;
+     display: flex;
+    flex-direction: column;
+   padding: 10px;
+   border: 1px solid #eee;
+   border-radius: 4px;
+     margin-left: 10px;
+}
+.singleDecision{
+  display: flex;
+    flex-wrap: wrap;
+  justify-content: space-evenly
+}
+.singleDecision button{
+    margin-bottom: 10px;
+}
+.exclusionText{
+     width: 100%;
+    min-height: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+     box-sizing: border-box;
+}
+.exclusionText:focus{
+    border-color: MediumSeaGreen;
+}
+
+.batchActions h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.batchActions {
+  margin-bottom: 10px;
+     padding: 10px;
+   border: 1px solid #eee;
+    border-radius: 4px;
+}
+.checkBoxContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkBoxContainer input{
+    margin-right: 10px;
+}
+.includeButton {
+   padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.includeButton:hover {
+     background-color: #253725;
+}
+.excludeButton {
+  padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.excludeButton:hover {
+   background-color: #253725;
+}
+.postponeButton {
+   padding: 8px 12px;
+    background-color: lightgray;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 5px;
+}
+.postponeButton:hover {
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .screeningContainer {
+    padding: 15px;
+  }
+   .articleDisplay {
+         flex-direction: column;
+    }
+   .decisionForm{
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,84 @@
+/* CriteriaManagement.module.css */
+.criteriaContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+   border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.criteriaContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.criteriaSection {
+  margin-bottom: 20px;
+}
+
+.criteriaSection h2 {
+  margin-bottom: 10px;
+}
+
+.addCriteria {
+  display: flex;
+  margin-bottom: 10px;
+}
+.criteriaInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.criteriaInput:focus {
+ border-color: MediumSeaGreen;
+}
+
+.addButton {
+  padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+       margin-left: 10px;
+}
+.addButton:hover {
+  background-color: #253725;
+}
+.criteriaList {
+  list-style: none;
+  padding: 0;
+}
+.criteriaItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #eee;
+    margin-bottom: 5px;
+   border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.deleteButton {
+     padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.deleteButton:hover{
+    background-color: #253725;
+}
+
+@media (max-width: 768px) {
+  .criteriaContainer {
+    padding: 15px;
+  }
+}

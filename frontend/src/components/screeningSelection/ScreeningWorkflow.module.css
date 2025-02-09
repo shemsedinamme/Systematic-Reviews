@@ -1,0 +1,61 @@
+/* ScreeningWorkflow.module.css */
+.workflowContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.workflowContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.workflowStage {
+  margin-bottom: 10px;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+}
+.workflowStage h2{
+   margin-bottom: 10px;
+}
+.assignReviewer{
+    display: flex;
+    align-items: center;
+  margin-bottom: 10px;
+}
+.selectInput{
+   padding: 8px;
+   border: 1px solid #ccc;
+    border-radius: 4px;
+   box-sizing: border-box;
+}
+.selectInput:focus{
+  border-color: MediumSeaGreen
+}
+.assignButton{
+   padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+      margin-left: 10px;
+}
+.assignButton:hover {
+    background-color: #253725;
+}
+.taskItem{
+  padding: 5px;
+  margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+@media (max-width: 768px) {
+  .workflowContainer {
+    padding: 15px;
+  }
+}
