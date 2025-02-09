@@ -1,0 +1,37 @@
+/* ExtractionTaskList.module.css */
+.taskListContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+     border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.taskListContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.taskTable {
+  width: 100%;
+    border-collapse: collapse;
+}
+
+.taskTable th,
+.taskTable td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.taskTable th {
+  background-color: #f2f2f2;
+}
+
+
+@media (max-width: 768px) {
+    .taskListContainer {
+        padding: 15px;
+    }
+}
