@@ -1,0 +1,112 @@
+/* UserList.module.css */
+.userListContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.userListContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.userTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.userTable th,
+.userTable td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.userTable select{
+ width: 100%;
+ padding: 8px;
+ border: 1px solid #ddd;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+.userTable select:focus{
+  border-color: MediumSeaGreen;
+}
+
+.userTable th {
+  background-color: #f2f2f2;
+}
+
+.userTable td input[type="text"],
+.userTable td input[type="email"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.userTable td input[type="text"]:focus,
+.userTable td input[type="email"]:focus{
+  border-color: MediumSeaGreen
+}
+
+.editButton {
+     padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.editButton:hover {
+    background-color: #253725;
+}
+.updateButton {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.updateButton:hover{
+    background-color: #253725;
+}
+
+.deleteButton {
+  padding: 8px 12px;
+  background-color: gray;
+  color: lemonchiffon;
+    border: none;
+  border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.deleteButton:hover {
+     background-color: #253725;
+}
+ .cancelButton {
+  padding: 8px 12px;
+  background-color: gray;
+  color: lemonchiffon;
+    border: none;
+  border-radius: 4px;
+    cursor: pointer;
+     font-size: 14px;
+}
+.cancelButton:hover {
+   background-color: #253725;
+}
+
+
+@media (max-width: 768px) {
+  .userListContainer {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,98 @@
+/* UserProfile.module.css */,
+.profileContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.profileContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profileDetails p {
+  margin-bottom: 10px;
+}
+
+.profileDetails strong {
+  font-weight: bold;
+}
+
+.profileEditForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.profileEditForm input:focus{
+  border-color: MediumSeaGreen;
+}
+.profileEditForm button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.profileEditForm button:hover{
+  background-color: #253725;
+}
+
+
+.editButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.editButton:hover {
+    background-color: #253725;
+}
+.saveButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.saveButton:hover {
+   background-color: #253725;
+}
+
+.cancelButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+     background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cancelButton:hover {
+     background-color: #253725;
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    padding: 15px;
+  }
+}
