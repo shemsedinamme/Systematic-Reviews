@@ -1,0 +1,94 @@
+/* ProtocolCreate.module.css */
+.protocolCreateContainer {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+   background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.protocolCreateContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.protocolForm {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.protocolInput{
+    flex: 1;
+      padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+     margin-right: 10px;
+}
+.protocolInput:focus {
+  border-color: MediumSeaGreen;
+}
+.templateSelect{
+     padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.templateSelect:focus{
+  border-color: MediumSeaGreen;
+}
+.sectionList{
+  padding: 10px;
+  border: 1px solid #eee;
+   border-radius: 4px;
+    margin-bottom: 10px;
+}
+.sectionItem {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.sectionItem h2{
+  margin-bottom: 10px;
+}
+.createButton {
+    padding: 10px 15px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+.createButton:hover {
+     background-color: #253725;
+}
+.saveButton {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.saveButton:hover {
+     background-color: #253725;
+}
+.message{
+  text-align: center;
+  padding: 10px;
+    margin-top:10px;
+  border-radius: 4px;
+    background: #f0f0f0;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .protocolCreateContainer {
+        padding: 15px;
+    }
+}

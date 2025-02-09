@@ -1,0 +1,146 @@
+/* ProtocolTemplate.module.css */
+.templateContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+  border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.templateContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.templateList{
+   border: 1px solid #eee;
+   padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+.templateItem{
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+.templateItem span{
+  font-size: 16px;
+  font-weight: bold;
+}
+.selectButton{
+ padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+.selectButton:hover {
+    background-color: #253725;
+}
+.shareButton {
+    padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+     margin-left: 10px;
+}
+
+.shareButton:hover {
+   background-color: #253725;
+}
+.newTemplate{
+     border: 1px solid #eee;
+   padding: 10px;
+    border-radius: 4px;
+}
+.newTemplate input,
+.newTemplate textarea{
+    width: 100%;
+     padding: 8px;
+    border: 1px solid #ccc;
+  border-radius: 4px;
+   box-sizing: border-box;
+     margin-bottom: 10px;
+}
+.newTemplate input:focus,
+.newTemplate textarea:focus{
+    border-color: MediumSeaGreen;
+}
+.addSection {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.addSection input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.addSection input:focus{
+    border-color: MediumSeaGreen
+}
+.addDataField{
+      margin-bottom: 10px;
+}
+.addDataField input{
+     width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.addDataField input:focus{
+    border-color: MediumSeaGreen;
+}
+.dataFieldList{
+    border: 1px solid #eee;
+     padding: 5px;
+     margin-bottom: 5px;
+}
+.dataFieldList li{
+  padding: 5px 10px;
+  border-bottom: 1px solid #eee;
+}
+.createButton{
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.createButton:hover{
+   background-color: #253725;
+}
+.deleteButton{
+ padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+       margin-left: 10px;
+}
+.deleteButton:hover {
+    background-color: #253725;
+}
+@media (max-width: 768px) {
+  .templateContainer {
+    padding: 15px;
+  }
+}
