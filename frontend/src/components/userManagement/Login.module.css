@@ -1,0 +1,72 @@
+/* Login.module.css */
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; /* Limit width for smaller screens */
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.loginContainer h1 {
+    text-align: right;
+    color: #35424a;
+    margin-bottom: 20px;
+}
+
+.inputGroup {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.inputGroup input[type="text"],
+.inputGroup input[type="password"]{
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.inputGroup input[type="text"]:focus,
+.inputGroup input[type="password"]:focus{
+ border-color: MediumSeaGreen
+}
+.button1 {
+    height: 38px;
+    background: MediumSeaGreen;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: lemonchiffon;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+.button1:hover {
+   background: #253725;
+}
+
+.togglePassword {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #35424a;
+}
+
+
+/* Media queries */
+@media (min-width: 768px) {
+    .loginContainer {
+      padding: 30px;
+      margin: auto;
+    }
+}

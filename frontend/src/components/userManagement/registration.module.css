@@ -1,0 +1,66 @@
+/* Registration.module.css */
+.createAccountContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.createAccountContainer h1 {
+    text-align: center;
+    color: #35424a;
+    margin-bottom: 20px;
+}
+
+.createAccountContainer input[type="text"],
+.createAccountContainer input[type="email"],
+.createAccountContainer input[type="password"],
+.createAccountContainer select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.createAccountContainer input[type="text"]:focus,
+.createAccountContainer input[type="email"]:focus,
+.createAccountContainer input[type="password"]:focus,
+.createAccountContainer select:focus{
+  border-color: MediumSeaGreen;
+}
+
+.createAccountContainer label{
+  margin-bottom: 5px;
+}
+.createAccountContainer button {
+  height:38px;
+    background: MediumSeaGreen;
+    border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: lemonchiffon;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.createAccountContainer button:hover {
+   background: #253725;
+}
+
+
+.createAccountContainer #studentFields{
+  display: block;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 768px) {
+  .createAccountContainer {
+    padding: 30px;
+  }
+}
