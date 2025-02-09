@@ -1,0 +1,81 @@
+/* AutomatedQuery.module.css */
+.automatedQueryContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+  border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.automatedQueryContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.keywordQuery, .picoQuery {
+    margin-bottom: 20px;
+     padding: 10px;
+     border: 1px solid #eee;
+    border-radius: 4px;
+}
+.keywordQuery h2, .picoQuery h2{
+ margin-bottom: 10px;
+}
+.keywordQuery textarea{
+    width: 100%;
+    padding: 8px;
+     border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.keywordQuery textarea:focus{
+  border-color: MediumSeaGreen;
+}
+.generateButton{
+    padding: 8px 12px;
+    background-color: MediumSeaGreen;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.generateButton:hover {
+    background-color: #253725;
+}
+.picoQuery input{
+   width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+     box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.picoQuery input:focus{
+  border-color: MediumSeaGreen
+}
+
+.generatedQuery{
+     border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 4px;
+}
+.generatedQuery textarea{
+    width: 100%;
+    min-height: 100px;
+     padding: 8px;
+    border: 1px solid #ccc;
+   border-radius: 4px;
+     box-sizing: border-box;
+}
+.generatedQuery textarea:focus{
+  border-color: MediumSeaGreen;
+}
+@media (max-width: 768px) {
+  .automatedQueryContainer {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,426 @@
+
+<!DOCTYPE This Search Query Builder page is intended to query builder tool to build query using a Tag Field Builder, Keywords Editor, PICO Builder, and file-upload methods>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SqBd Search Builder</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="querybuilder.css">
+      <script src="./css/custom-script.js."></script>
+      <link rel="icon" href="img/BE_20241227_463.png">
+      </head>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+         .important {
+            background-color: #f8f9fa;
+           padding: 15px;
+            border-left: 4px solid #e74c3c;
+            margin: 15px 0;
+            border-radius: 5px;
+            }
+        .feature-box {
+            background-color: #f0f0f0;
+             padding: 10px;
+            border-radius: 5px;
+           margin: 15px 0;
+       }
+        .code-snippet {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #eee;
+            margin: 10px 0;
+            font-family: monospace;
+            border-radius: 5px;
+             white-space: pre-wrap;
+            word-wrap: break-word;
+            overflow-x: auto;
+
+       }
+     /* Header/nav styles for the website */
+header {
+   background: mediumseagreen;
+   padding-top: 30px;
+   min-height: 70px;
+   border-bottom: lemonchiffon 3px solid;
+}
+
+header a {
+   color: #ffffff;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 16px;
+}
+
+header li {
+   float: left; /* align list items to the left*/
+   display: inline; /* make list items act as inline elements */
+   padding: 0 20px 0 20px;  /* add right and left padding*/
+}
+
+header #branding {
+    float: left; /* place branding to the left */
+}
+
+header #branding h1 {
+    margin: 0;
+    color: ghostwhite;
+}
+
+header nav {
+    float: right;   /* place navigation to the right*/
+    margin-top: 10px; /* add padding to the navigation */
+}
+
+header .highlight, header .current a {
+    color:lemonchiffon;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+/* Newsletter Styles */
+#newsletter{
+    padding: 15px;
+    color: #ffffff;
+    background: MediumSeaGreen;
+    text-align: center;
+}
+
+#newsletter h1 {
+    float: left;
+    font-size: 16px;
+}
+
+#newsletter input{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+/* Footer */
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: MediumSeaGreen;
+    text-align: center;
+}
+/* Buttons */
+.button_1{
+    height: 30px;
+    background: lemonchiffon;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: black;
+}
+    </style>
+</head>
+<body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span class="highlight">ARMS</span> Review Hub - SqBd</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="sqtr.html">Query Translator</a></li>
+            <li><a href="sqtb.html">Query Builder</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="current"><a href="querybuilder.html">SqTb User Guide</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+        <section id="newsletter">
+      <div class="container">
+        <h1 style="text-align: center; color: white">Subscribe To Our Updates</h1>
+        <form>
+          <input type="email" placeholder="Enter Email..." required>
+          <button type="submit" class="button_1">Subscribe     <script>  document.querySelectorAll('.button_1').forEach(button => {
+  button.addEventListener('click', function (e) {
+    e.preventDefault(); => {
+    alert('Button clicked!');  </script></button>
+<script>
+const target1 = document.querySelector(this.getAttribute('email'));
+    if (target1) {
+    	button.addEventListener('click', () => {
+    	behavior: 'smooth',
+        block: 'start',
+       alert('Button clicked!');
+              });
+              });
+</script>
+    
+        </form>
+      </div>
+    </section>
+This Search Query Builder page is intended to query builder tool to build query using a Tag Field Builder, Keywords Editor, PICO Builder, and file-upload methods. The following gives you clue,
+    <h1>SqBd Search Builder - User Manual</h1>
+
+    <p>The SqBd Search Builder is a tool designed to help you construct complex search queries for various Query Forms. It provides multiple ways to input your search terms and combine them using boolean operators, allowing you to tailor your searches more effectively.</p>
+
+    <h2>Key Features</h2>
+
+    <ul>
+        <li><strong>Multiple Input Methods:</strong>
+            <ul>
+               <li>Short Form Query Builder</li>
+               <li>Keyword Input</li>
+               <li>File Upload</li>
+           </ul>
+        </li>
+       <li><strong>Boolean Operators:</strong> Combine terms using AND, OR, and NOT operators.</li>
+        <li><strong>Query History:</strong> Track and reuse previous queries.</li>
+        <li><strong>Downloadable Query Form:</strong> Download designed queries for each form.</li>
+        <li><strong>Query Form Selection:</strong> Choose target Query Forms for query building.</li>
+         <li><strong>"Add To History" Button:</strong> Add current query to history list.</li>
+        <li><strong>Flexible Editing:</strong> The query text area allows direct editing of the query.</li>
+        <li><strong>Copy to Clipboard:</strong> Easily copy queries to your clipboard.</li>
+
+    </ul>
+
+    <h2>User Interface Overview</h2>
+
+    <p>The interface is divided into the following key sections:</p>
+
+    <ul>
+        <li><strong>Input Query:</strong> This section is where you enter your search terms. It includes three different input methods, and a query text box.</li>
+       <li><strong>Query History:</strong> A table that records all of the queries and its sequence and has buttons for clearing history and download history.</li>
+        <li><strong>Select Query Forms:</strong> This is where you select which Query Forms you would like your query to be Collated to.</li>
+        <li><strong>Collated Queries:</strong> This section displays your Collated queries for the selected Query Forms.</li>
+    </ul>
+
+    <h2>Detailed Instructions</h2>
+
+    <h3>1. Input Query Section</h3>
+
+    <p>This section is further divided into the following three input method sections:</p>
+
+    <div class="feature-box">
+        <h4>Short Form Query Builder</h4>
+        <ul>
+            <li><strong>Adding Input Terms:</strong>
+                <ul>
+                 <li>Select tag from the "field-select" dropdown menu which include "Title/Abstract", "Text Word", and "MeSH Terms".</li>
+                    <li>Enter your search term into the input box.</li>
+                 </ul>
+           </li>
+            <li><strong>Adding Multiple Terms:</strong>
+                <ul>
+                   <li>To add multiple terms:</li>
+                    <ul>
+                        <li>Click on the "Add Field" button after adding a new term.</li>
+                         <li>A new input field will be added.</li>
+                         <li>You can add an identifier tags and a term to the input field, like in the previous step.</li>
+                     </ul>
+               </ul>
+            </li>
+            <li><strong>Selecting Boolean Operators:</strong>
+                <ul>
+                   <li>Choose between "AND", "OR", and "NOT" using the radio button options. This selection will be used to combine the input terms.</li>
+                </ul>
+            </li>
+          <li><strong>Clearing Input Fields:</strong>
+               <ul>
+                   <li>Click "Clear" button to clear all input fields and the query box.</li>
+                </ul>
+          </li>
+        </ul>
+    </div>
+     <div class="feature-box">
+          <h4>Keyword Input</h4>
+        <ul>
+           <li>Enter keywords separated by spaces into the text input box. The system will automatically combine these keywords with the "AND" operator.</li>
+            <li>Click "Submit Keywords" to add the new search terms to the query box.</li>
+        </ul>
+    </div>
+     <div class="feature-box">
+         <h4>File Upload</h4>
+         <ul>
+            <li>Upload a <code>.txt</code> file. The content of this file will be loaded into the query input box.</li>
+           <li>The file content will directly uploaded and shown in the query box and also in history.</li>
+       </ul>
+    </div>
+    <div class="feature-box">
+         <h4>Query Input Box</h4>
+         <ul>
+             <li>The query text area shows your current query based on your inputs. You can also directly edit the content of the query here.</li>
+             <li>You can use "Copy", "Paste", "Clear", "Undo", and "Redo" buttons under the query box.
+                 <ul>
+                    <li><strong>Copy:</strong> copy the current query string from the text area to clipboard.</li>
+                    <li><strong>Paste:</strong> paste a copied query string to query text area.</li>
+                     <li><strong>Clear:</strong> clears all input in the query text area.</li>
+                     <li><strong>Undo:</strong> moves to the previous recorded query text area string.</li>
+                    <li><strong>Redo:</strong> Moves forward to the next record in the query text area history.</li>
+                 </ul>
+             </li>
+            <li><strong>Adding Current Query to History:</strong>
+                <ul>
+                     <li>Use "Add To History" button to add current query from text area to query history.</li>
+               </ul>
+            </li>
+        </ul>
+    </div>
+
+   <h3>2. Query History Section</h3>
+    <ul>
+      <li><strong>Viewing History:</strong> All queries added are listed with a sequence number.</li>
+        <li><strong>Clearing History:</strong> Click "Clear History" to remove all the saved query from history and local storage.</li>
+       <li><strong>Downloading History:</strong> Click "Download History" to export your query history as a <code>.txt</code> file.</li>
+       <li><strong>Adding History to Query Box:</strong>
+            <ul>
+               <li>Click on the query entries on the history table to add that query string to the query box. The query string will be added to query box while also enclosed in parenthesis using the selected boolean operator.</li>
+            </ul>
+        </li>
+   </ul>
+
+    <h3>3. Select Query Forms Section</h3>
+    <p>Check the boxes next to the Query Forms you want to Collate your query for (PubMed customized short and extended forms, Edited keywords, and PICO parameters). You have to select at least one Query Form in order to Collate query, otherwise, an error message will be shown.</p>
+
+    <h3>4. Collate  and Download Functionalities</h3>
+    <ul>
+       <li><strong>Collating/Building:</strong>
+            <ul>
+                 <li>Click "Collate/Build" button to view the Collated results.</li>
+            </ul>
+        </li>
+       <li><strong>Download for each Collated Query Form:</strong>
+            <ul>
+                <li>Each Collated query will have a "Copy" and "Download" button.</li>
+               <li><strong>Copy:</strong> Click "Copy" to copy Collated query to the clipboard.</li>
+              <li><strong>Download:</strong> Click "Download" to download the Collated query as a <code>.txt</code> file.</li>
+           </ul>
+      </li>
+      <li><strong>Download All Collated Queries:</strong>
+            <ul>
+               <li>Click "Download All" to download all Collated queries as a single <code>.txt</code> file.</li>
+           </ul>
+       </li>
+   </ul>
+    <h2>Building Complex Queries</h2>
+
+    <p>Here's how to build complex, nested queries using the tools and functionalities offered by SqBd. For example, let's assume we have to create the following search query:</p>
+
+    <div class="code-snippet">
+        <code>((challenge[tiab] OR challenge[tiab] OR difficulty[tw]) AND ("health services accessibility"[mesh] OR access[tiab])) AND ("paramedic service"[mesh] OR "ambulance service"[mesh] OR ambulance[tiab] OR ambulance[tiab] OR "emergency transport"[tw]) NOT ("air ambulance"[tiab] AND "HEMS"[mesh])</code>
+    </div>
+    <ol>
+        <li><strong>Building the First Concept:</strong>
+            <ul>
+               <li>Use the Short Form to build <code>challenge[tiab] OR challenge[tiab] OR difficulty[tw]</code>:
+                 <ul>
+                  <li>In the first input field, select "Title/Abstract", add <code>challenge</code> to term box. Click "Add Field" button.</li>
+                   <li>Click "OR" radio button and select "Title/Abstract", and add <code>challenge</code> to the term box. Click "Add Field" button.</li>
+                    <li>Click "OR" radio button, select "Text Word" tag, and add  <code>difficulty</code> to term box, and then click "Add Field" button.</li>
+                 </ul>
+               </li>
+                <li>Click on "Add To History" button to add this to history.</li>
+          </ul>
+        </li>
+        <li><strong>Building the Second Concept:</strong>
+            <ul>
+                <li>Use the Short Form to build <code>("health services accessibility"[mesh] OR access[tiab])</code>
+                    <ul>
+                       <li>In the first input field, select "MeSH Terms", add <code>"health services accessibility"</code> to term box. Click "Add Field" button.</li>
+                       <li>Click "OR" radio button, select "Title/Abstract" tag, add <code>access</code> to term box, and click "Add Field" button.</li>
+                    </ul>
+                </li>
+                <li>Click on "Add To History" button to add this to history.</li>
+           </ul>
+        </li>
+        <li><strong>Building the Third Concept:</strong>
+            <ul>
+                <li> Use the Short Form to build <code>("paramedic service"[mesh] OR "ambulance service"[mesh] OR ambulance[tiab] OR ambulance[tiab] OR "emergency transport"[tw])</code>
+                    <ul>
+                       <li>In the first input field, select "MeSH Terms" tag, and add  <code>"paramedic service"</code> to term box, click "Add Field" button.</li>
+                         <li>Click "OR" radio button and select "MeSH Terms" tag, and add  <code>"ambulance service"</code> to term box, click "Add Field" button.</li>
+                        <li>Click "OR" radio button and select "Title/Abstract" tag, and add <code>ambulance</code> to term box, click "Add Field" button.</li>
+                        <li>Click "OR" radio button, and add <code>ambulance</code> to term box, click "Add Field" button.</li>
+                        <li>Click "OR" radio button and select "Text Word" tag, and add  <code>"emergency transport"</code> to term box, click "Add Field" button.</li>
+                    </ul>
+               </li>
+              <li>Click on "Add To History" button to add this to history.</li>
+          </ul>
+        </li>
+      <li><strong>Building the Fourth Concept:</strong>
+           <ul>
+                <li> Use the Short Form to build <code>("air ambulance"[tiab] AND "HEMS"[mesh])</code>
+                    <ul>
+                        <li>In the first input field, select "Title/Abstract" tag, and add <code>"air ambulance"</code> to term box, click "Add Field" button.</li>
+                        <li>Click "AND" radio button and select "MeSH Terms" tag, and add <code>"HEMS"</code> to term box, click "Add Field" button.</li>
+                   </ul>
+                </li>
+               <li>Click on "Add To History" button to add this to history.</li>
+            </ul>
+        </li>
+        <li><strong>Combining Concepts:</strong>
+            <ul>
+                 <li>Click on first history entries on history table, so that it appear on query box, add.  You can verify the query in query box <code>(challenge[tiab] OR challenge[tiab] OR difficulty[tw])</code></li>
+                <li>Click on "AND" radio button.</li>
+                <li>Click on the second history entry so it adds to query box, and verify the query box which should be <code>(challenge[tiab] OR challenge[tiab] OR difficulty[tw]) AND ("health services accessibility"[mesh] OR access[tiab])</code></li>
+                <li>Now, Click on "Add To History" button.</li>
+                 <li>Click on the third history entry so it adds to query box, and verify the query box which should be <code>("paramedic service"[mesh] OR "ambulance service"[mesh] OR ambulance[tiab] OR ambulance[tiab] OR "emergency transport"[tw])</code></li>
+                <li>Click "NOT" radio button</li>
+               <li>Click on the fourth history entry so it adds to query box, and verify the query box which should be <code>("paramedic service"[mesh] OR "ambulance service"[mesh] OR ambulance[tiab] OR ambulance[tiab] OR "emergency transport"[tw]) NOT ("air ambulance"[tiab] AND "HEMS"[mesh])</code></li>
+                <li>Now Click on "Add To History" button.</li>
+          </ul>
+        </li>
+       <li><strong>Combining All Concepts:</strong>
+             <ul>
+                <li>Click on the first history entry to so that it shows up in the query text area  <code>((challenge[tiab] OR challenge[tiab] OR difficulty[tw]) AND ("health services accessibility"[mesh] OR access[tiab]))</code>.</li>
+                 <li>Click on "AND" radio button.</li>
+                <li>Click on the second to the last query which should be <code>("paramedic service"[mesh] OR "ambulance service"[mesh] OR ambulance[tiab] OR ambulance[tiab] OR "emergency transport"[tw]) NOT ("air ambulance"[tiab] AND "HEMS"[mesh])</code></li>
+          </ul>
+      </li>
+    </ol>
+    <p>You will have the combined and nested query in your query text area. Then you can submit to Collate.</p>
+
+    <h2>Tips for Effective Use</h2>
+    <ul>
+      <li><strong>Start Simple:</strong> Begin by building small parts of your query and gradually combine them to form complex nested structure.</li>
+        <li><strong>Use History Wisely:</strong> Utilize the history functionality to avoid retyping previously constructed queries.</li>
+       <li><strong>Clear Formatting:</strong> Ensure your query is clear and well-formed with parenthesis, tags, and the boolean operators, this is particularly important when using the copy/paste or manual edit option.</li>
+        <li><strong>Combine Methods:</strong> Mix different input methods for a balanced approach.</li>
+    </ul>
+
+    <h2>Support and Feedback</h2>
+    <p>For support or feedback, you can contact us at admin@reviewhub.net.et or shamsuamme@gmail.com or shemsedin.ibro@ju.edu.et.</p>
+  
+  <footer>
+    <p>© 2025 ARMS. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
