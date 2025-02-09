@@ -1,0 +1,42 @@
+/* RealTimeCollaboration.module.css */
+.collaborationContainer {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+    border: 1px solid #ddd;
+   border-radius: 8px;
+     background: #fff;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.collaborationContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.editor {
+    min-height: 400px;
+   border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+.toolbar{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.revertButton{
+    padding: 8px 12px;
+    background-color: gray;
+    color: lemonchiffon;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.revertButton:hover{
+    background-color: #253725;
+}
+@media (max-width: 768px) {
+  .collaborationContainer {
+    padding: 15px;
+  }
+}

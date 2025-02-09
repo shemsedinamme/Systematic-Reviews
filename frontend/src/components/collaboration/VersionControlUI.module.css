@@ -1,0 +1,20 @@
+/* VersionControlUI.module.css */
+.versionControlContainer {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+    border-radius: 8px;
+     background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.versionControlContainer h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .versionControlContainer {
+    padding: 15px;
+  }
+}
