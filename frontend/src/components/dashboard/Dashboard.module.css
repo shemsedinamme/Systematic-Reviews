@@ -1,0 +1,149 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Header Styling */
+.dashboardHeader {
+    background-color: #007acc;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dashboardHeader h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.dashboardHeader p {
+    font-size: 1.2em;
+}
+/* Admin Taskbar */
+.adminTaskbar {
+    background-color: #e0e7ff;
+    padding: 15px 20px;
+    margin: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.adminTaskbar h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.adminTaskbar ul {
+    list-style-type: none;
+}
+
+.adminTaskbar ul li {
+    margin: 5px 0;
+}
+
+.adminTaskbar ul li a {
+    color: #333;
+    font-weight: bold;
+}
+
+.adminTaskbar ul li a:hover {
+    color: #007acc;
+    text-decoration: underline;
+}
+
+/* Main Dashboard Grid */
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+     background-image: url("FB_IMG_1734202798990.jpg");
+    background-blend-mode: multiply;
+    
+}
+
+/* Dashboard Section Styling */
+.dashboardSection {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.dashboardSection h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #007acc;
+}
+
+.dashboardSection h3 {
+    font-size: 1.4em;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.dashboardSection ul {
+    list-style-type: none;
+}
+
+.dashboardSection ul li {
+    margin: 8px 0;
+}
+
+.dashboardSection ul li a {
+    font-size: 1.1em;
+}
+
+.dashboardSection:hover {
+    transform: translateY(-5px);
+}
+/* Footer Styling */
+.dashboardFooter {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboardHeader h1 {
+        font-size: 1.8em;
+    }
+
+    .dashboardSection {
+        padding: 15px;
+    }
+
+    .dashboardFooter {
+        font-size: 0.9em;
+    }
+  }
+
+.icon {
+  display: inline-block;
+  border-radius: 50%; /* Make the icon round */
+  overflow: hidden; /* Hide any overflow content */  
+}
+
+.icon img {
+  width: 100%; /* Make the image fill the container */
+  height: 100%;
+  object-fit: cover; /* Ensure image covers the container without distortion */
+}
+.logo-box{
+  width: 10%; /* Make the image fill the container */
+  height: 5%;
+  object-fit: cover; /* Ensure image covers the container without distortion */
+    opacity:0.6;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
+  
