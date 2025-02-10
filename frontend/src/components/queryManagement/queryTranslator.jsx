@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from './QueryTranslator.module.css';
+import styles from './queryTranslator.module.css';
 
 const QueryTranslator = () => {
   const [query, setQuery] = useState('');
