@@ -1,0 +1,296 @@
+/* General Styles */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 960px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Header & Navigation */
+header {
+    background-color: MediumSeaGreen;
+    padding: 20px 0;
+    color: white;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover,
+header nav .current a {
+    color: lemonchiffon;
+}
+
+/* Main Content Area */
+#main-content {
+    padding: 20px 0;
+}
+
+/* Query Builder Container */
+.queryBuilderContainer {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.queryBuilderContainer h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: MediumSeaGreen;
+}
+
+/* Input Tabs */
+.nav-tabs .nav-link {
+    border: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #e9ecef;
+    color: MediumSeaGreen;
+}
+
+.nav-tabs .nav-link:hover {
+    color: MediumSeaGreen;
+}
+
+.tab-content {
+    padding-top: 20px;
+}
+
+/* Short Form Builder */
+.queryBuilderInputs .input-group {
+    margin-bottom: 10px;
+}
+
+.queryBuilderInputs .form-control {
+    border-radius: 4px;
+}
+
+.queryActions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.queryActions .btn {
+    margin-right: 10px;
+}
+
+/* Keyword and PICO Input */
+.keywordInputSection, .picoInputSection {
+    margin-bottom: 20px;
+}
+
+.keywordInputSection label, .picoInputSection label {
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.keywordInputSection input[type="text"], .picoInputSection input[type="text"], .picoInputSection textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.keywordInputSection button, .picoInputSection button {
+    background-color: MediumSeaGreen;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.keywordInputSection button:hover, .picoInputSection button:hover {
+    background-color: #253725;
+}
+
+/* Query Textarea */
+#query {
+    width: 100%;
+    min-height: 120px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+/* Query History */
+#queryHistoryTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+#queryHistoryTable th, #queryHistoryTable td {
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    text-align: left;
+}
+
+#queryHistoryTable th {
+    background-color: #f2f2f2;
+    font-weight: 500;
+}
+
+#queryHistoryTable tbody tr:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+#queryHistoryTable td .btn{
+    margin-right: 5px;
+}
+
+/* Collated Queries */
+#constructedQueries .card {
+    margin-bottom: 15px;
+}
+
+.collatedQueryContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.collatedQueryContainer pre {
+    margin: 0;
+    flex-grow: 1;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.collatedQueryContainer .btn {
+    margin-left: 10px;
+    background-color: MediumSeaGreen;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.collatedQueryContainer .btn:hover {
+    background-color: #253725;
+}
+
+/* Buttons */
+.btn-primary, .btn-success, .btn-danger, .btn-secondary {
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-danger:hover, .btn-secondary:hover {
+    filter: brightness(0.9);
+}
+
+/* Footer */
+footer {
+    background-color: MediumSeaGreen;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #query{
+        width: 100%;
+    }
+    input, textarea{
+        width:100%;
+    }
+    .container {
+        padding: 10px;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav li {
+        margin: 10px 0;
+        margin-left: 0;
+    }
+
+    .queryActions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .queryActions .btn {
+        margin: 5px;
+    }
+
+    .collatedQueryContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .collatedQueryContainer pre {
+        margin-bottom: 10px;
+    }
+  }
