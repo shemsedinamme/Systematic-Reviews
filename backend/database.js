@@ -2,169 +2,165 @@ const mysql = require('mysql2/promise');
 require('dotenv').config();
 
 const pool = mysql.createPool({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT,
-    waitForConnections: true,
-    connectionLimit: 10,
-    queueLimit: 0,
-    //ssl: { //if you are using SSL connection you will have to uncomment this section and provide the appropriate certificates.
-        //rejectUnauthorized: true,
-    //}
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT,
+  waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
+  //ssl: { //if you are using SSL connection you will have to uncomment this section and provide the appropriate certificates.
+  //rejectUnauthorized: true,
+  //}
 });
 
-
- class Database {
+class Database {
   constructor(pool) {
-     this.pool = pool;
-   }
-
- async executeQuery(query, params) {
-    try {
-        const [results] = await this.pool.query(query, params);
-       return results; // Generic result handler to array output only for consistency
-
-       } catch (error) {
-            console.error('Database query error', error); // Log the details
-          throw new Error(`Database error, please check server logs ${error.message}`) ;  // Propogate it further along implementation with API level with better description with codes. that can handle later in main layer try catch by responding http codes or messages etc with response body format
-      }
+    this.pool = pool;
   }
 
-   // This should execute INSERT query by id parameter. And also validates to have valid parameter id before query executed, with table and json body properties (model type check on each data object ).
-     async insertRecord (table, data, requiredKeys)  {
-         if(!data)  throw new Error("Insertion body cannot be null or undefined")
-         const columns = Object.keys(data) // extracts keys dynamically from JSON data
-          const valuesPlaceholders = columns.map(()=> "?").join(', ')
-           const query  = `INSERT INTO  ${table}  (${columns.join(', ')}) VALUES(${valuesPlaceholders})`;
-         const  insert_value  =   columns.map((key) =>  data[key] || null); // ensure null for other types values etc when is empty;
+  async executeQuery(query, params) {
+    try {
+      const [results] = await this.pool.query(query, params);
+      return results;
+    } catch (error) {
+      console.error('Database query error', error);
+      throw new Error(`Database error, please check server logs ${error.message}`);
+    }
+  }
 
-      try {
-           const insertRes =   await this.executeQuery(query,  insert_value )
+  async insertRecord(table, data, requiredKeys) {
+    if (!data) throw new Error("Insertion body cannot be null or undefined");
+    const columns = Object.keys(data);
+    const valuesPlaceholders = columns.map(() => "?").join(', ');
+    const query = `INSERT INTO ${table} (${columns.join(', ')}) VALUES(${valuesPlaceholders})`;
+    const insert_value = columns.map((key) => data[key] || null);
 
-        if (!insertRes) {
-          throw new Error('Failed to insert record. please provide with required keys as provided') ; // throws insertion issues in implementation stage
-       }
+    try {
+      const insertRes = await this.executeQuery(query, insert_value);
+
+      if (!insertRes) {
+        throw new Error('Failed to insert record. please provide with required keys as provided');
+      }
       return insertRes
-         }
-          catch(e){
-           console.error("failed insertion error", e);
-         throw e // re throw error for other implementaton use-case that consumes that class helper, with specific exception message by error type ( insert, sql syntax , network )
-         }
-     }
-     // similar pattern we do update, or insert using query call or direct functions or methods
-       async updateRecord (table, data, id, id_column , requiredKeys ) { // to validate only necessary required values/fields on models while update (id column needed too for update based filter query),  also other options like conditional filters etc can also be implemented .
+    } catch (e) {
+      console.error("failed insertion error", e);
+      throw e;
+    }
+  }
 
-          const updates = Object.keys(data) .filter(key => data[key] !== undefined)
-             .map(key => `${key} = ?`).join(','); // ensure only not null parameter updated (optional update with parameter logic )
-            const  update_values  = Object.values(data).filter(value => value !== undefined )
+  async updateRecord(table, data, id, id_column, requiredKeys) {
+    const updates = Object.keys(data)
+      .filter(key => data[key] !== undefined)
+      .map(key => `${key} = ?`).join(',');
+    const update_values = Object.values(data).filter(value => value !== undefined);
 
-           if (!id || !id_column ) { throw new Error('Id field is missing while updating' ) };// validations check for id column implementation
+    if (!id || !id_column) {
+      throw new Error('Id field is missing while updating');
+    }
 
-          if(updates.length === 0 || Object.keys(data).length ===0 ) return null;  // handle if nothing has change that avoids updating SQL (no update should happen, null return value here ). based on current design logic
-      try {
+    if (updates.length === 0 || Object.keys(data).length === 0) return null;
+    try {
 
-         const updateQuery  = `UPDATE ${table} SET  ${updates}   WHERE ${id_column} = ? `;
-          const queryValue =   [...update_values, id ];// add id param value for  updating table
-              return await this.executeQuery(updateQuery, queryValue);
+      const updateQuery = `UPDATE ${table} SET ${updates} WHERE ${id_column} = ? `;
+      const queryValue = [...update_values, id];
+      return await this.executeQuery(updateQuery, queryValue);
 
-     }
-      catch (e) {
-      console.error(" update failed",e)
-       throw  e ;
-     }
+    } catch (e) {
+      console.error(" update failed", e)
+      throw e;
+    }
 
- }
-  // To Fetch one based id columns. All result must transform via mapping and should create Object type ( like what mentioned for each data table ) that map correct json structure to specific tables when is necessary .
-    async getRecordById(table, id, id_column, dataModel)  {
-     if (!id || !id_column) throw new Error("Id parameter is missing on data fetching for an id ") // throws missing id when needed a ID . all exception details, validation, is at model layers
+  }
 
-         const  fetchQuery = `SELECT *  FROM  ${table} WHERE ${id_column} = ? `;
-          try {
-          const [item ]= await  this.executeQuery(fetchQuery, [id])
+  async getRecordById(table, id, id_column, dataModel) {
+    if (!id || !id_column) throw new Error("Id parameter is missing on data fetching for an id ")
 
-          if (!item)   return null; // no result (not-found case ) , we would manage the result at main API (by catching an exception using standard catch function ) to re map ( throw null or status of 404 with no user etc
+    const fetchQuery = `SELECT * FROM ${table} WHERE ${id_column} = ? `;
+    try {
+      const [item] = await this.executeQuery(fetchQuery, [id])
 
-       // console.log(" item mapped by objec t data:", item[0], typeof  dataModel);
-              return   this.transformData(item[0], dataModel) // transform results
+      if (!item) return null; // no result (not-found case ) , we would manage the result at main API (by catching an exception using standard catch function ) to re map ( throw null or status of 404 with no user etc
 
-           } catch(e)  {
-              console.error(" data  query error", e)
-               throw new Error(`failed data select by id ${e.message}`);
-              }
+      // console.log(" item mapped by objec t data:", item[0], typeof  dataModel);
+      return this.transformData(item[0], dataModel) // transform results
+
+    } catch (e) {
+      console.error(" data  query error", e)
+      throw new Error(`failed data select by id ${e.message}`);
+    }
+  }
+
+  // used only at routes module, as this fetch always all rows.  Must add validation along this query or function before execution based on needs from requirements ( such for large queries etc using pagination etc ). for generic select all call on any table
+  async getAllRecord(table, dataModel) {
+
+    const getAllquery = `SELECT * FROM ${table}`
+    try {
+
+      const rows = await this.executeQuery(getAllquery);
+
+      // transform with multiple record mappings as array from that SQL select queries, with new mapped values from that json based data object using functional interface from that objects mapping of ModelObjects as response from  database results using generic methods in one places.
+      return rows.map(item => this.transformData(item, dataModel));
+
+    } catch (error) {
+      console.error(error) // internal issues on database levels
+      throw new Error(`Data read issue at database levels. Check database for more. ${error.message} `);
+    }
+  }
+  // transform results , as we want json formatted ( for every api call), based specific column names
+  transformData(item, Model) {
+
+    if (!item) return null; // no valid input, so returns nothing to return at implementation layer based function call by each function
+    if (typeof Model !== 'function') {
+      return item;
+    } // generic cases  with default
+
+    try {
+
+      const modelObj = new Model()
+      Object.keys(item).forEach((key) => modelObj[key] = item[key] || null);
+      return modelObj; // create using constructor ( that could format object with properties that needs to map as  json ) object return based on the Model Interface, each models will ensure the correct data format will follow
+
+    } catch (e) {
+      console.error('Object transofmation Error:', e); // errors on any model to transform at data set
+      return item // data not mapped properly so, returns original db format data instead by rethrowing an exception
+
+    }
+
   }
 
 
- // used only at routes module, as this fetch always all rows.  Must add validation along this query or function before execution based on needs from requirements ( such for large queries etc using pagination etc ). for generic select all call on any table
-  async getAllRecord (table, dataModel ){
+  async deleteRecord(table, id, id_column) {
 
-          const getAllquery =   `SELECT * FROM  ${table}`
+    if (!id || !id_column) throw new Error("Id or Id_column parameters not specified");
+    const deleteQuery = `DELETE FROM ${table} WHERE ${id_column} = ?`;
     try {
+      const delResults = await this.executeQuery(deleteQuery, [id]);
+      if (!delResults) throw new Error(" Delete data Failed due to DB problems ")
+      return delResults; // del result details or rows after deletion and sql related implementation response
+    } catch (e) {
+      console.error('SQL deletion Error:', e);
+      throw e // throws delete error
 
-       const rows = await this.executeQuery(getAllquery);
-
-        // transform with multiple record mappings as array from that SQL select queries, with new mapped values from that json based data object using functional interface from that objects mapping of ModelObjects as response from  database results using generic methods in one places.
-    return rows.map(item=>   this.transformData(item,dataModel));
-
-    } catch(error)  {
-       console.error(error) // internal issues on database levels
-        throw new Error (`Data read issue at database levels. Check database for more. ${error.message} `);
-      }
-  }
-    // transform results , as we want json formatted ( for every api call), based specific column names
-    transformData (item, Model) {
-
-     if (!item) return null; // no valid input, so returns nothing to return at implementation layer based function call by each function
-    if( typeof  Model !== 'function') { return item ;} // generic cases  with default
-
-    try {
-
-        const modelObj = new Model()
-         Object.keys(item).forEach((key)=> modelObj[key] = item[key] || null );
-          return modelObj; // create using constructor ( that could format object with properties that needs to map as  json ) object return based on the Model Interface, each models will ensure the correct data format will follow
-
-       } catch(e) {
-       console.error('Object transofmation Error:', e); // errors on any model to transform at data set
-         return item // data not mapped properly so, returns original db format data instead by rethrowing an exception
-
-      }
-
- }
-
-
- async deleteRecord(table, id, id_column )  {
-
-    if (!id || !id_column)   throw new Error("Id or Id_column parameters not specified");
-      const deleteQuery =   `DELETE  FROM ${table}  WHERE ${id_column} = ?`;
-    try{
-      const delResults = await  this.executeQuery(deleteQuery,  [id]);
-        if (!delResults) throw new Error(" Delete data Failed due to DB problems ")
-       return  delResults ; // del result details or rows after deletion and sql related implementation response
-          }catch (e)
-            {
-          console.error('SQL deletion Error:',e);
-           throw e // throws delete error
-
-     }
+    }
 
   }
 
 
   async queryByRawSql(rawSqlString) {
-        try {
-        const result= await  this.executeQuery(rawSqlString)
-       return result ;  // it will just directly send output in its array structure
-           } catch(e)
-               {
-             throw e ;  // any query fails in sql execution level
-              }
+    try {
+      const result = await this.executeQuery(rawSqlString)
+      return result; // it will just directly send output in its array structure
+    } catch (e) {
+      throw e; // any query fails in sql execution level
+    }
 
   }
 
 }
 
- module.exports =  new Database(pool);
+module.exports = new Database(pool);
 
 const createUserTable = async () => {
     try {
@@ -862,7 +858,7 @@ const createReportTemplatesTable = async () => {
    const query = `
         CREATE TABLE IF NOT EXISTS report_templates (
             template_id VARCHAR(36) PRIMARY KEY,
-            template_name VARCHAR(255) NOT NULL,
+                        template_name VARCHAR(255) NOT NULL,
             template_type VARCHAR(50),
             template_structure JSON NOT NULL
         );
@@ -950,4 +946,4 @@ initializeDatabase()
     });
     
     module.exports = pool;
-                
+            
