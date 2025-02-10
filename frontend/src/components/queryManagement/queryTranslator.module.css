@@ -69,7 +69,7 @@ header nav .current a {
 }
 
 /* Query Builder Container */
-.queryBuilderContainer {
+.query-builder-container {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -77,7 +77,7 @@ header nav .current a {
     margin-bottom: 20px;
 }
 
-.queryBuilderContainer h1 {
+.query-builder-container h1 {
     text-align: center;
     margin-bottom: 20px;
     color: MediumSeaGreen;
@@ -104,35 +104,35 @@ header nav .current a {
 }
 
 /* Short Form Builder */
-.queryBuilderInputs .input-group {
+.query-builder-inputs .input-group {
     margin-bottom: 10px;
 }
 
-.queryBuilderInputs .form-control {
+.query-builder-inputs .form-control {
     border-radius: 4px;
 }
 
-.queryActions {
+.query-actions {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
-.queryActions .btn {
+.query-actions .btn {
     margin-right: 10px;
 }
 
 /* Keyword and PICO Input */
-.keywordInputSection, .picoInputSection {
+.keyword-input-section, .pico-input-section {
     margin-bottom: 20px;
 }
 
-.keywordInputSection label, .picoInputSection label {
+.keyword-input-section label, .pico-input-section label {
     font-weight: 500;
     margin-bottom: 8px;
 }
 
-.keywordInputSection input[type="text"], .picoInputSection input[type="text"], .picoInputSection textarea {
+.keyword-input-section input[type="text"], .pico-input-section input[type="text"], .pico-input-section textarea {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -141,7 +141,7 @@ header nav .current a {
     margin-bottom: 10px;
 }
 
-.keywordInputSection button, .picoInputSection button {
+.keyword-input-section button, .pico-input-section button {
     background-color: MediumSeaGreen;
     color: white;
     border: none;
@@ -151,7 +151,7 @@ header nav .current a {
     transition: background-color 0.3s;
 }
 
-.keywordInputSection button:hover, .picoInputSection button:hover {
+.keyword-input-section button:hover, .pico-input-section button:hover {
     background-color: #253725;
 }
 
@@ -168,38 +168,38 @@ header nav .current a {
 }
 
 /* Query History */
-#queryHistoryTable {
+#query-history-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-#queryHistoryTable th, #queryHistoryTable td {
+#query-history-table th, #query-history-table td {
     padding: 10px;
     border: 1px solid #dee2e6;
     text-align: left;
 }
 
-#queryHistoryTable th {
+#query-history-table th {
     background-color: #f2f2f2;
     font-weight: 500;
 }
 
-#queryHistoryTable tbody tr:hover {
+#query-history-table tbody tr:hover {
     background-color: #f5f5f5;
     cursor: pointer;
 }
 
-#queryHistoryTable td .btn{
+#query-history-table td .btn{
     margin-right: 5px;
 }
 
 /* Collated Queries */
-#constructedQueries .card {
+#constructed-queries .card {
     margin-bottom: 15px;
 }
 
-.collatedQueryContainer {
+.translated-query-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -209,14 +209,14 @@ header nav .current a {
     margin-bottom: 10px;
 }
 
-.collatedQueryContainer pre {
+.translated-query-container pre {
     margin: 0;
     flex-grow: 1;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
 
-.collatedQueryContainer .btn {
+.translated-query-container .btn {
     margin-left: 10px;
     background-color: MediumSeaGreen;
     color: white;
@@ -227,7 +227,7 @@ header nav .current a {
     transition: background-color 0.3s;
 }
 
-.collatedQueryContainer .btn:hover {
+.translated-query-container .btn:hover {
     background-color: #253725;
 }
 
@@ -238,6 +238,44 @@ header nav .current a {
 
 .btn-primary:hover, .btn-success:hover, .btn-danger:hover, .btn-secondary:hover {
     filter: brightness(0.9);
+}
+
+/* Syntax Highlighting */
+.boolean-operator {
+    color: mediumblue;
+    font-weight: bold;
+}
+
+.quotation-mark {
+    color: orangered;
+    font-weight: bold;
+}
+
+.bracket {
+    color: orangered;
+    font-weight: bold;
+}
+
+.wildcard {
+    color: deeppink;
+    font-weight: bold;
+}
+
+.untagged-term {
+    color: chocolate;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.misspelled-tag {
+    color: mediumvioletred;
+    font-weight: bold;
+}
+
+/* Error Handling */
+.error {
+    color: magenta;
+    font-weight: bold;
 }
 
 /* Footer */
@@ -275,22 +313,22 @@ footer {
         margin-left: 0;
     }
 
-    .queryActions {
+    .query-actions {
         flex-direction: row;
         flex-wrap: wrap;
         align-items: center;
     }
 
-    .queryActions .btn {
+    .query-actions .btn {
         margin: 5px;
     }
 
-    .collatedQueryContainer {
+    .translated-query-container {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .collatedQueryContainer pre {
+    .translated-query-container pre {
         margin-bottom: 10px;
     }
 }
